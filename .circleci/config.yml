@@ -5,14 +5,14 @@ jobs:
      - image: ruby:2.3.4
        environment:
          PGHOST: 127.0.0.1
-         PGUSER: myapp
+         PGUSER: wilbert
          RAILS_ENV: test
      - image: redis:3.2
      - image: postgres:9.4.1
        environment:
-         POSTGRES_USER: Databasexxxxxxxxxxx
+         POSTGRES_USER: wilbert
 
-   working_directory: /home/ronny/flimper/training-ronnyxxxxxxxxx
+   working_directory: /home/Documents/repo/trainning-wilbert
    steps:
      - checkout
      - run: apt-get update -qq && apt-get install -y build-essential nodejs
