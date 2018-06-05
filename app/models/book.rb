@@ -12,7 +12,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
 class Book < ApplicationRecord
-	validates: :genre, :author, :image, :title, :publisher, :year, presence: true
+  validates :genre, :author, :image, :title, :publisher, :year, presence: true
 end
