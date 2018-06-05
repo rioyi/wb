@@ -27,3 +27,6 @@
 
 # Agregando el directorio test
 /test/*
+
+# Ignore application configuration
+/config/application.yml
