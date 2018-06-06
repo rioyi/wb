@@ -9,7 +9,6 @@ describe Book, type: :model do
 
   it '#create book' do
     book = create(:book)
-    puts book.title
     expect(book.valid?).to eq(true)
   end
 end
