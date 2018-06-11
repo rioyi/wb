@@ -9,6 +9,8 @@ AllCops:
   Exclude:
     - spec/support/spec_helper.rb
     - spec/rails_helper.rb
+    - app/authentication/*
+    - app/controllers/application_controller.rb
 
 Metrics/ModuleLength:
   Exclude:

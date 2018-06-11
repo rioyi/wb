@@ -42,6 +42,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 
+gem 'versionist'
+
+gem 'jwt'
+
 gem 'activeadmin'
 
 group :development, :test do
