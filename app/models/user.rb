@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :first_name, :last_name, :email, :password, presence: true
   has_many :rents, dependent: :destroy
+  has_many :book_suggestions, dependent: :destroy
 
   # app/models/user.rb
   # ...
