@@ -8,7 +8,7 @@ module Api
       end
 
       def create
-        @book_suggestion = BookSuggestion.new(booksuggestion_params)
+        @book_suggestion = BookSuggestion.new(book_suggestion_params)
         @book_suggestion.user_id = current_user.try(:id)
         if @book_suggestion.save
           render json: @book_suggestion, status: :created
@@ -19,16 +19,8 @@ module Api
 
       private
 
-      def booksuggestion_params
-        {
-          author: params[:author],
-          title: params[:title],
-          link: params[:link],
-          editorial: params[:editorial],
-          price: params[:price],
-          publisher: params[:publisher],
-          year: params[:year]
-        }
+      def book_suggestion_params
+        params.permit(:author, :title, :link, :editorial, :price, :publisher, :year)
       end
     end
   end
