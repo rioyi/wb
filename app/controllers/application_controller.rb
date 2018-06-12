@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  #pundit
   include Pundit
   protect_from_forgery
   rescue_from ActionController::ParameterMissing, with: :render_nothing_bad_req
