@@ -2,7 +2,7 @@ module Api
   module V1
     class BooksController < ApplicationController
       before_action :set_book, only: %i[show]
-      before_action :authenticate_request, except: %i[show index]
+      before_action :authenticate_request, except: %i[show]
 
       def index
         @books = Book.all
