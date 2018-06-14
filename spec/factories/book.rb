@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :book do
-    genre Faker::Book.title
-    author Faker::Book.title
-    image  Faker::Book.title
     title Faker::Book.title
-    publisher Faker::Book.title
-    year Faker::Book.title
+    author Faker::Book.author
+    publisher Faker::Book.publisher
+    genre Faker::Book.genre
+    image Faker::Internet.url('example.com', '/foobar.jpg')
+    year Faker::Number.number(4)
   end
 end

@@ -1,5 +1,7 @@
 require 'shoulda-matchers'
 require 'factory_bot_rails'
+require 'authenticate_helper'
+require 'faker'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
