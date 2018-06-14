@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::BookSuggestionsController, type: :controller do
   describe 'Create a booksuggestion' do
     context '#create' do
-      let!(:attrs) { attributes_for(:book_suggestion) }
+      let(:attrs) { attributes_for(:book_suggestion) }
       it 'add a new booksuggestion' do
         post :create, format: :json
         expect do
