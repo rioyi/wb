@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::BookSuggestionsController, type: :controller do
   describe 'Create a booksuggestion' do
-    context '#create' do
+    context 'When the parameters are valid' do
       let(:attrs) { attributes_for(:book_suggestion) }
       it 'add a new booksuggestion' do
         post :create, format: :json
@@ -15,7 +15,9 @@ RSpec.describe Api::V1::BookSuggestionsController, type: :controller do
         post :create, format: :json, params: attrs
         expect(response).to have_http_status(:created)
       end
+    end
 
+    context 'When the parameters are invalid' do
       it 'responds with unprocessable_entity' do
         post :create, format: :json
         expect(response).to have_http_status(:unprocessable_entity)
