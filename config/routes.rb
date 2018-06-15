@@ -18,5 +18,6 @@ Rails.application.routes.draw do
     # Resource Book
     resources :books, only: %i[index show]
     resources :book_suggestions, only: %i[index create]
+    resources :rents, only: %i[index create]
   end
 end
