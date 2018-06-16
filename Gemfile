@@ -52,6 +52,20 @@ gem 'active_model_serializers'
 # Pundit provides a set of helpers which guide you in leveraging regular Ruby classes and object oriented design patterns to build a simple, robust and scaleable authorization system.
 gem 'pundit'
 
+gem 'sidekiq'
+gem 'sidekiq-cron', '~> 0.6.3'
+gem 'sidekiq-failures'
+
+# gem 'active_model_serializers', '~> 0.10.0'
+# gem 'omniauth-google-oauth2'
+# gem 'pundit'
+# gem 'sidekiq'
+# gem 'sidekiq-cron', '~> 0.6.3'
+# gem 'sidekiq-failures'
+# gem 'sinatra', require: nil
+# gem 'versionist'
+# gem 'yard', '~> 0.9.12'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
