@@ -5,10 +5,8 @@ class RentMailer < ApplicationMailer
   #
   #   en.rent_mailer.notification_of_registered_data.subject
   #
-  def notification_of_registered_data(rent, book)
-    # @rent = rent
-    # @book = book
-    # mail to: email, subject: "Felicidades la renta del libro N: #{book.id} ha sido exitosa"
-    mail to: 'wilbert.angarita@gmail.com', subject: "Felicidades la renta del libro N: "
+  def notification_of_rent(rent)
+    @rent = rent
+    mail(to: 'wilbert.angarita@gmail.com', subject: "Felicidades rentaste el libro: #{rent.book.title}")
   end
 end
