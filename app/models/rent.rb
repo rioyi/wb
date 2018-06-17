@@ -8,5 +8,4 @@ class Rent < ApplicationRecord
   def email_rent
     EmailRentWorker.perform_in(10.seconds, id)
   end
-
 end
