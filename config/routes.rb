@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+  root 'welcome#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-
   # API Endpoints
   api_version(module: 'api/v1', path: { value: 'api/v1' }, defaults: { format: :json }) do
     resources :users do
