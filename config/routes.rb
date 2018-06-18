@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: 'sidekiq'
   get 'welcome/index'
   root 'welcome#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
