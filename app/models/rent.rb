@@ -6,6 +6,6 @@ class Rent < ApplicationRecord
   private
 
   def email_rent
-    EmailRentWorker.perform_in(10.seconds, id)
+    EmailRentWorker.perform_async(id)
   end
 end
