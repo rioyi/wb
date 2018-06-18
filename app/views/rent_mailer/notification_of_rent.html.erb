@@ -41,7 +41,20 @@
             </tr>
             <tr>
               <td class="bodycopy">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
+                <strong>Detalles de la renta:</strong>
+                <ul>
+                  <li><strong>Fecha del registro: </strong> <%= @rent.created_at %></li>
+                  <li><strong>Desde: </strong> <%= @rent.from %></li>
+                  <li><strong>Hasta: </strong> <%= @rent.to %></li>
+                </ul>
+                <strong>Detalles del libro:</strong>
+                <ul>
+                  <li><strong>Titulo: </strong><%= @rent.book.title %></li>
+                  <li><strong>Genero: </strong><%= @rent.book.genre %></li>
+                  <li><strong>Autor: </strong><%= @rent.book.author %></li>
+                  <li><strong>Editorial: </strong><%= @rent.book.publisher %></li>
+                  <li><strong>Año: </strong><%= @rent.book.year %></li>
+                </ul>
               </td>
             </tr>
           </table>

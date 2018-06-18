@@ -6,6 +6,6 @@ class RentMailer < ApplicationMailer
   #
   def notification_of_rent(rent)
     @rent = rent
-    mail(to: 'wilbert.angarita@gmail.com', subject: "Felicidades rentaste el libro: #{rent.book.title}")
+    mail(to: rent.user.email, subject: "Felicidades rentaste el libro: #{rent.book.title}")
   end
 end
