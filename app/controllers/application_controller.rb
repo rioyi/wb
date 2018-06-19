@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :render_nothing_bad_req
   protect_from_forgery with: :null_session
   before_action :current_user
+  before_action :set_locale
 
   private
 
@@ -66,4 +67,15 @@ class ApplicationController < ActionController::Base
   	# converts current_user to a boolean by negating the negation
   	!!current_user
   end
+
+  # present locals?
+  def user_have_locale
+    current_user.locale unless current_user.nil? || current_user.locale.nil?
+  end
+
+  # set locals to app
+  def set_locale
+    I18n.locale = user_have_locale.to_sym || I18n.default_locale
+  end
+
 end

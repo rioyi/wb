@@ -1,0 +1,14 @@
+es:
+  email_rent_template:
+    gender: 'Genero'
+    author: 'Autor'
+    detail_book: 'Detalle del libro'
+    title_rent: 'Alquiler del libro'
+    creation_date: 'Fecha de creación'
+    detail_rent: 'Detalle del alquiler'
+    title: 'Titulo'
+    year: 'Año'
+    image: 'Imagen'
+    from: 'Desde'
+    to: 'A'
+    published: 'Editorial'

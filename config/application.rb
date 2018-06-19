@@ -18,12 +18,15 @@ module TrainningWilbert
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-                                          :authentication => :plain,
-                                          :address => "smtp.mailgun.org",
-                                          :port => 587,
-                                          :domain => ENV['MAILGUN_DOMAIN'],
-                                          :user_name => ENV['MAILGUN_SMTP_LOGIN'],
-                                          :password => ENV['MAILGUN_PASSWORD']
-                                        }
-  end
+      :authentication => :plain,
+      :address => "smtp.mailgun.org",
+      :port => 587,
+      :domain => ENV['MAILGUN_DOMAIN'],
+      :user_name => ENV['MAILGUN_SMTP_LOGIN'],
+      :password => ENV['MAILGUN_PASSWORD']
+    }
+    config.i18n.default_locale = :es
+    config.i18n.fallbacks = true
+    I18n.available_locales = %i[en es]
+    end
 end

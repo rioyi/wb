@@ -41,19 +41,19 @@
             </tr>
             <tr>
               <td class="bodycopy">
-                <strong>Detalles de la renta:</strong>
+                <strong><%= I18n.t 'email_rent_template.detail_rent' %></strong>
                 <ul>
-                  <li><strong>Fecha del registro: </strong> <%= @rent.created_at %></li>
-                  <li><strong>Desde: </strong> <%= @rent.from %></li>
-                  <li><strong>Hasta: </strong> <%= @rent.to %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.creation_date' %>: </strong> <%= @rent.created_at %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.from' %>: </strong> <%= @rent.from %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.to' %>: </strong> <%= @rent.to %></li>
                 </ul>
-                <strong>Detalles del libro:</strong>
                 <ul>
-                  <li><strong>Titulo: </strong><%= @rent.book.title %></li>
-                  <li><strong>Genero: </strong><%= @rent.book.genre %></li>
-                  <li><strong>Autor: </strong><%= @rent.book.author %></li>
-                  <li><strong>Editorial: </strong><%= @rent.book.publisher %></li>
-                  <li><strong>Año: </strong><%= @rent.book.year %></li>
+                <strong><%= I18n.t 'email_rent_template.detail_book' %>: </strong>
+                  <li><strong><%= I18n.t 'email_rent_template.title' %>: </strong><%= @rent.book.title %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.gender' %>: </strong><%= @rent.book.genre %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.author' %>: </strong><%= @rent.book.author %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.published' %>: </strong><%= @rent.book.publisher %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.year' %>: </strong><%= @rent.book.year %></li>
                 </ul>
               </td>
             </tr>
