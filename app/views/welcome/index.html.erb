@@ -5,3 +5,8 @@
   <%= image_tag 'flimper.jpg' %>
   <a href="/auth/google_oauth2">Sign in with Google</a>
 </div>
+<div>
+  <% unless @token_data.blank? %>
+    <%= @token_data %>
+  <% end %>
+</div>
