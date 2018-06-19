@@ -3,13 +3,9 @@ Rails.application.routes.draw do
   mount Sidekiq::Web, at: 'sidekiq'
   get 'welcome/index'
   root 'welcome#index'
-  
+
   get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
-  get 'auth/google_oauth2/callback', to: 'welcome#login'
-  get 'auth/failure', to: redirect('/')
-  get 'home', to: 'home#show'
-  get 'me', to: 'me#show', as: 'me'
+  get 'auth/google_oauth2/callback', to: 'sessions#authenticable'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

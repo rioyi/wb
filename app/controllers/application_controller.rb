@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :render_nothing_bad_req
   protect_from_forgery with: :null_session
   before_action :current_user, :authenticate_request
-  before_action :set_locale
 
   private
 
@@ -69,3 +68,4 @@ class ApplicationController < ActionController::Base
     head :bad_request
   end
 end
+
