@@ -28,5 +28,5 @@ module TrainningWilbert
     config.i18n.default_locale = :es
     config.i18n.fallbacks = true
     I18n.available_locales = %i[en es]
-    end
+  end
 end

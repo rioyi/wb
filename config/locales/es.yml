@@ -1,5 +1,10 @@
 es:
   email_rent_template:
+    subject: 'Felicidades rentaste el libro: quilombo de la vida'
+    welcome: 'Bienvenido al sistema de renta de libros de Flimper'
+    title_head: 'Titulo del ejemplar'
+    thx: 'Gracias por rentar un libro'
+    unsubscribe: 'Sin suscripción'
     gender: 'Genero'
     author: 'Autor'
     detail_book: 'Detalle del libro'
@@ -12,3 +17,5 @@ es:
     from: 'Desde'
     to: 'A'
     published: 'Editorial'
+  RentMailer:
+    subject: "Felicidades por tu renta!!!"

@@ -4,10 +4,27 @@ class ApplicationController < ActionController::Base
   rescue_from ActionController::ParameterMissing, with: :render_nothing_bad_req
   rescue_from ActiveRecord::RecordNotFound, with: :render_nothing_bad_req
   protect_from_forgery with: :null_session
-  before_action :current_user
+  before_action :current_user, :authenticate_request
   before_action :set_locale
 
   private
+
+  def set_locale
+    I18n.locale = user_have_lang || I18n.default_locale
+  end
+
+  # verifica que el usuario este presente y que posea un lenguaje definido
+  def user_have_lang
+    current_user.locale unless current_user.blank? || current_user.locale.blank?
+  end
+
+  def current_user
+    @current_user ||= authentication_manager.current_user
+  end
+
+  def authentication_manager
+    @authentication_manager ||= AuthenticationManager.new(request.headers)
+  end
 
   # Serializer methods
   def default_serializer_options
@@ -51,31 +68,4 @@ class ApplicationController < ActionController::Base
   def render_nothing_bad_req
     head :bad_request
   end
-
-  protect_from_forgery with: :exception
-  helper_method :current_user
-
-  def authenticate
-  	redirect_to :login unless user_signed_in?
-  end
-
-  def current_user
-  	@current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-
-  def user_signed_in?
-  	# converts current_user to a boolean by negating the negation
-  	!!current_user
-  end
-
-  # present locals?
-  def user_have_locale
-    current_user.locale unless current_user.nil? || current_user.locale.nil?
-  end
-
-  # set locals to app
-  def set_locale
-    I18n.locale = user_have_locale.to_sym || I18n.default_locale
-  end
-
 end
