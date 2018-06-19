@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :authenticate_request, except: %i[authenticable]
   before_action :user_exist?
 
   def user_exist?
