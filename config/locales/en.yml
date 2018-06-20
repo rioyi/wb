@@ -47,5 +47,4 @@ en:
     published: "published"
     year: "Year"
     image: "Image"
-  RentMailer:
-      subject: "Congratulations for your rent!!!"
+    subject: "Congratulations for your rent!!!"

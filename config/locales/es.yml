@@ -17,5 +17,4 @@ es:
     from: 'Desde'
     to: 'A'
     published: 'Editorial'
-  RentMailer:
-    subject: "Felicidades por tu renta!!!"
+    subject: 'Felicidades por tu renta!!!'

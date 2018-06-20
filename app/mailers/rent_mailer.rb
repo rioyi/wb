@@ -7,7 +7,7 @@ class RentMailer < ApplicationMailer
   def notification_of_rent(rent)
     @rent = rent
     I18n.with_locale(rent.user.locale) do
-      mail(to: rent.user.email, subject: I18n.t('RentMailer .subject'))
+      mail(to: rent.user.email, subject: I18n.t('email_rent_template.creation_date'))
     end
   end
 end
