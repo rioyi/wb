@@ -1,0 +1,3 @@
+:queues:
+  - default
+  - notify_rent_total_days_worker
