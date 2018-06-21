@@ -1,1 +1,92 @@
-<h1>Se envio la notifiacion</h1>
+<table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td>
+    <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td bgcolor="#c7d8a7" class="header">
+          <table width="70" align="left" border="0" cellpadding="0" cellspacing="0">  
+            <tr>
+              <td height="70" style="padding: 0 20px 20px 0;">
+                <img class="fix" src="images/icon.gif" width="70" height="70" border="0" alt="" />
+              </td>
+            </tr>
+          </table>
+          <table class="col425" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 425px;">  
+            <tr>
+              <td height="70">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="subhead" style="padding: 0 0 0 3px;">
+                      <%= I18n.t 'email_rent_template.thx'%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="h1" style="padding: 5px 0 0 0;">
+                      <%= I18n.t 'email_rent_template.title_head'%> <strong><%= @rent.book.title %><strong>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="innerpadding borderbottom">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="h2">
+                <%= I18n.t 'email_rent_template.welcome'%>
+              </td>
+            </tr>
+            <tr>
+              <td class="bodycopy">
+                <h2> <%= I18n.t 'email_notification_of_rent_days.body' %>  </h2>
+                <h1> <%= @days %> </h1>
+                <strong><%= I18n.t 'email_rent_template.detail_rent' %></strong>
+                <ul>
+                  <li><strong><%= I18n.t 'email_rent_template.creation_date' %>: </strong> <%= @rent.created_at %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.from' %>: </strong> <%= @rent.from %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.to' %>: </strong> <%= @rent.to %></li>
+                </ul>
+                <ul>
+                <strong><%= I18n.t 'email_rent_template.detail_book' %>: </strong>
+                  <li><strong><%= I18n.t 'email_rent_template.title' %>: </strong><%= @rent.book.title %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.gender' %>: </strong><%= @rent.book.genre %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.author' %>: </strong><%= @rent.book.author %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.published' %>: </strong><%= @rent.book.publisher %></li>
+                  <li><strong><%= I18n.t 'email_rent_template.year' %>: </strong><%= @rent.book.year %></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="innerpadding borderbottom">
+          <img class="fix" src="images/wide.png" width="100%" border="0" alt="" />
+        </td>
+      </tr>
+      <tr>
+        <td class="innerpadding bodycopy">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
+        </td>
+      </tr>
+      <tr>
+        <td class="footer" bgcolor="#44525f">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center" class="footercopy">
+                &reg; CopyLeft, BookFlimper 2018<br/>
+                <a href="#" class="unsubscribe"><font color="#ffffff"><%= I18n.t 'email_rent_template.unsubscribe' %></font></a> 
+                <span class="hide">www.flimper.com</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+

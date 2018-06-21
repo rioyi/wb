@@ -48,3 +48,6 @@ en:
     year: "Year"
     image: "Image"
     subject: "Congratulations for your rent!!!"
+  email_notification_of_rent_days:
+    subject: 'The available days of your rent is: %{days}'
+    body: 'Dear user, the days available before your rent expires:'

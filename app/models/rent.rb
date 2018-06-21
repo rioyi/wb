@@ -7,9 +7,9 @@ class Rent < ApplicationRecord
   def self.send_email_to_user
     rents = rents_not_expired
     return false if rents.empty?
-    rents.each do |r|
-      days = (r.to - Time.zone.today).to_i
-      NotifyRentDaysMailer.notification_of_rent_days(days, r.user).deliver
+    rents.each do |rent|
+      days = (rent.to - Time.zone.today).to_i
+      NotifyRentDaysMailer.notification_of_rent_days(days, rent).deliver
     end
   end
 
