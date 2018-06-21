@@ -30,4 +30,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  email_rent_template:
+    welcome: 'Welcome to the Flimper book rental system'
+    title_head: 'Title of the issue'
+    thx: 'Thank you for renting a book'
+    unsubscribe: 'Unsubscribe'
+    author: "Author"
+    title_rent: "Rent of the book"
+    detail_rent: "Detail of the rent"
+    creation_date: "Creation date"
+    from: "From"
+    to: "To"
+    detail_book: "Detail of the book"
+    gender: "Gender"
+    title: "Title"
+    published: "published"
+    year: "Year"
+    image: "Image"
+    subject: "Congratulations for your rent!!!"
