@@ -56,6 +56,9 @@ gem 'sidekiq'
 gem 'sidekiq-cron', '~> 0.6.3'
 gem 'sidekiq-failures'
 
+gem 'omniauth-google-oauth2'
+# gem 'google-api-client'
+
 # gem 'active_model_serializers', '~> 0.10.0'
 # gem 'omniauth-google-oauth2'
 # gem 'pundit'
