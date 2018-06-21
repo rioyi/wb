@@ -8,6 +8,23 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def set_locale
+    I18n.locale = user_have_lang || I18n.default_locale
+  end
+
+  # verifica que el usuario este presente y que posea un lenguaje definido
+  def user_have_lang
+    current_user.locale unless current_user.blank? || current_user.locale.blank?
+  end
+
+  def current_user
+    @current_user ||= authentication_manager.current_user
+  end
+
+  def authentication_manager
+    @authentication_manager ||= AuthenticationManager.new(request.headers)
+  end
+
   # Serializer methods
   def default_serializer_options
     { root: false }
