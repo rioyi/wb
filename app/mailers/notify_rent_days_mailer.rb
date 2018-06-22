@@ -4,7 +4,7 @@ class NotifyRentDaysMailer < ApplicationMailer
     @rent = rent
 
     I18n.with_locale(rent.user.locale) do
-      mail(to:rent.user.email, subject: I18n.t('email_notification_of_rent_days.subject', days: days))
+      mail(to: rent.user.email, subject: I18n.t('email_notification_of_rent_days.subject', days: days))
     end
   end
 end
